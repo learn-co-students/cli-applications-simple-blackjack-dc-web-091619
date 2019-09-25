@@ -40,8 +40,8 @@ def hit?(current_card_value)
   input = get_user_input
   # binding.pry
   if input != "s" && input != "h"
-    invalid_command 
-    prompt_user
+  prompt_user
+  invalid_command
     # binding.pry
 elsif input == "h"
     return current_card_value += deal_card
