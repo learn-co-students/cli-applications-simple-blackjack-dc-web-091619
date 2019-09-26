@@ -35,28 +35,26 @@ def invalid_command
 end
 
 def hit?(current_card_value)
-  # binding.pry
   prompt_user
   input = get_user_input
-  # binding.pry
   if input != "s" && input != "h"
-  invalid_command + prompt_user
-
-    # binding.pry
+  invalid_command 
+  hit?(current_card_value)
 elsif input == "h"
     return current_card_value += deal_card
   end
     current_card_value
   end
- 
-  
-
-
-#####################################################
-# get every test to pass before coding runner below #
-#####################################################
 
 def runner
-  # code runner here
+  count = 0 
+welcome
+total =  initial_round
+total
+until total > 21 do 
+ total = hit?(total)
+ display_card_total(total)
+end
+end_game(total)
 end
     
